@@ -9,18 +9,22 @@
 
 package edu.oop.guild.creature;
 
-import edu.oop.guild.model.DeliveryRequest;
 import edu.oop.guild.model.RealmType;
-import java.util.Objects;
 
-public abstract class Creature {
-    public abstract String name();
-    public abstract int carryingCapacityKg();
-    public abstract RealmType nativeRealm();
+public class TunnelMole extends Creature {
 
-    public boolean canCarry(DeliveryRequest request) {
-        Objects.requireNonNull(request, "request must not be null");
-        return request.getDestinationRealm() == nativeRealm()
-            && request.getWeightKg() <= carryingCapacityKg();
+    @Override
+    public String name() {
+        return "Grumble the Tunnel Mole";
+    }
+
+    @Override
+    public int carryingCapacityKg() {
+        return 30;
+    }
+
+    @Override
+    public RealmType nativeRealm() {
+        return RealmType.UNDERGROUND;
     }
 }
