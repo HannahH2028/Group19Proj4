@@ -29,7 +29,7 @@ public class CarefulDeliveryStrategy implements DeliveryCostStrategy{
 				cost += 17;
 				break;
 			default:
-				throw new IllegalArgumentException("Delivery request must have a type");
+				throw new IllegalArgumentException("Delivery request must have a valid type");
 		} //end switch
 		
 		//returning found cost
