@@ -28,6 +28,8 @@ public class CarefulDeliveryStrategy implements DeliveryCostStrategy{
 			case ARTIFACT:
 				cost += 17;
 				break;
+			default:
+				throw new IllegalArgumentException("Delivery request must have a type");
 		} //end switch
 		
 		//returning found cost
