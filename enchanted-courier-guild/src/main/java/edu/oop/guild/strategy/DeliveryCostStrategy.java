@@ -9,7 +9,7 @@ package edu.oop.guild.strategy;
 
 import edu.oop.guild.model.DeliveryRequest;
 
-//this is basically an abstract to base the other strategies on
-public abstract class DeliveryCostStrategy {
-	public abstract int estimateCoins(DeliveryRequest request);
+//this is basically an interface to base the other strategies on
+public interface DeliveryCostStrategy {
+	int estimateCoins(DeliveryRequest request);
 }
