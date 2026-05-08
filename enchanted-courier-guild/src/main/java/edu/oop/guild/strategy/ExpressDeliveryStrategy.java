@@ -7,7 +7,7 @@ package edu.oop.guild.strategy;
 import java.util.Objects;
 import edu.oop.guild.model.DeliveryRequest;
 
-public class ExpressDeliveryStrategy extends DeliveryCostStrategy{
+public class ExpressDeliveryStrategy implements DeliveryCostStrategy{
 	public int cost; //for the cost
 	
 	@Override
