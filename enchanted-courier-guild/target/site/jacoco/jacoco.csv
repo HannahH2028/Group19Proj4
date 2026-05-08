@@ -16,5 +16,5 @@ Enchanted Courier Guild,edu.oop.guild.model,DeliveryRequest,0,55,0,4,0,16,0,8,0,
 Enchanted Courier Guild,edu.oop.guild.model,RealmType,0,28,0,0,0,7,0,3,0,3
 Enchanted Courier Guild,edu.oop.guild.service,DeliveryPlanner,0,79,0,2,0,21,0,3,0,2
 Enchanted Courier Guild,edu.oop.guild.strategy,StandardDeliveryStrategy,0,33,0,2,0,6,0,3,0,2
-Enchanted Courier Guild,edu.oop.guild.strategy,CarefulDeliveryStrategy,5,42,1,3,1,10,1,4,0,2
+Enchanted Courier Guild,edu.oop.guild.strategy,CarefulDeliveryStrategy,0,42,1,3,0,10,1,4,0,2
 Enchanted Courier Guild,edu.oop.guild.strategy,ExpressDeliveryStrategy,0,33,0,2,0,6,0,3,0,2
