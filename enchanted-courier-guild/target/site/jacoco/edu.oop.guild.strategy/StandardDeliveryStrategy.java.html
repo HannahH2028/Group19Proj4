@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>StandardDeliveryStrategy.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Enchanted Courier Guild</a> &gt; <a href="index.source.html" class="el_package">edu.oop.guild.strategy</a> &gt; <span class="el_source">StandardDeliveryStrategy.java</span></div><h1>StandardDeliveryStrategy.java</h1><pre class="source lang-java linenums">//Hannah Huang
+//formula from what I can gather: weight*2 + distance*3 + 3 (+ 5 more if fragile)
+//assumed PackageType and RealmType does not affect pricing
+
+package edu.oop.guild.strategy;
+
+import java.util.Objects;
+import edu.oop.guild.model.DeliveryRequest;
+
+<span class="fc" id="L10">public class StandardDeliveryStrategy implements DeliveryCostStrategy{</span>
+	public int cost; //for the cost
+	
+	@Override
+	public int estimateCoins(DeliveryRequest request) {
+		//making sure something is actually passed in
+<span class="fc" id="L16">		Objects.requireNonNull(request, &quot;Request cannot be null&quot;); </span>
+		
+		//math
+<span class="fc" id="L19">		cost = (request.getWeightKg() * 2) + (request.getDistanceLeagues() * 3) + 3;</span>
+		//checking if it's fragile, and adding further tax if so
+<span class="fc bfc" id="L21" title="All 2 branches covered.">		if(request.isFragile() == true) {</span>
+<span class="fc" id="L22">			cost += 5;</span>
+		}
+		
+		//returning the estimated cost
+<span class="fc" id="L26">		return cost;</span>
+	} //end function
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

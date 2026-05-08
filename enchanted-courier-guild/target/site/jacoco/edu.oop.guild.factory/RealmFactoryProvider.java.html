@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RealmFactoryProvider.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Enchanted Courier Guild</a> &gt; <a href="index.source.html" class="el_package">edu.oop.guild.factory</a> &gt; <span class="el_source">RealmFactoryProvider.java</span></div><h1>RealmFactoryProvider.java</h1><pre class="source lang-java linenums">//Fady Francis
+//AI: Claude
+//Strategy: My strategy for designing something like this using AI, is using several tests and making sure that the code is built around the
+//the tests, AI has a very hard time forgetting what to do or how to do something if the implementation is built around something else. 
+//this strategy is going to be basically the same for all code written by me.
+//Prompt: Implement a RealmFactory.java that can allow the implementation of SkyRealmFactory and UndergroundRealmFactory.(never asked it
+//to make this specifically but it did and it seemed fine to me). After doing some testing this file gave some errors, so I located the error, and had Gemini Repair the error by 
+//getting rid of a specific line and changing the default case.
+
+package edu.oop.guild.factory;
+
+import edu.oop.guild.model.RealmType;
+import java.util.Objects;
+
+<span class="fc" id="L15">public class RealmFactoryProvider {</span>
+
+    public RealmFactory forRealm(RealmType realmType) {
+
+<span class="fc" id="L19">        Objects.requireNonNull(realmType);</span>
+
+
+<span class="fc bfc" id="L22" title="All 2 branches covered.">        if (realmType == RealmType.SKY) {</span>
+<span class="fc" id="L23">            return new SkyRealmFactory();</span>
+        }
+
+    
+<span class="fc" id="L27">        return new UndergroundRealmFactory();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

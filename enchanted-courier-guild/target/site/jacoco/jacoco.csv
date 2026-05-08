@@ -1,0 +1,20 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Enchanted Courier Guild,edu.oop.guild.log,GuildLog,0,37,0,0,0,11,0,7,0,7
+Enchanted Courier Guild,edu.oop.guild.factory,SkyRealmFactory,0,11,0,0,0,3,0,3,0,3
+Enchanted Courier Guild,edu.oop.guild.factory,RealmFactoryProvider,0,17,0,2,0,5,0,3,0,2
+Enchanted Courier Guild,edu.oop.guild.factory,UndergroundRealmFactory,0,11,0,0,0,3,0,3,0,3
+Enchanted Courier Guild,edu.oop.guild.creature,Creature,0,21,0,4,0,4,0,4,0,2
+Enchanted Courier Guild,edu.oop.guild.creature,CloudDragon,0,9,0,0,0,4,0,4,0,4
+Enchanted Courier Guild,edu.oop.guild.creature,TunnelMole,0,9,0,0,0,4,0,4,0,4
+Enchanted Courier Guild,edu.oop.guild.notification,OwlScrollNotificationAdapter,0,28,0,0,0,8,0,2,0,2
+Enchanted Courier Guild,edu.oop.guild.notification,LegacyOwlScroll,0,27,0,8,0,6,0,6,0,2
+Enchanted Courier Guild,edu.oop.guild.seal,GlowStoneSeal,0,12,0,0,0,4,0,3,0,3
+Enchanted Courier Guild,edu.oop.guild.seal,SkyRibbonSeal,0,12,0,0,0,4,0,3,0,3
+Enchanted Courier Guild,edu.oop.guild.model,DeliveryPlan,0,55,0,2,0,15,0,7,0,6
+Enchanted Courier Guild,edu.oop.guild.model,PackageType,0,35,0,0,0,8,0,3,0,3
+Enchanted Courier Guild,edu.oop.guild.model,DeliveryRequest,0,55,0,4,0,16,0,8,0,6
+Enchanted Courier Guild,edu.oop.guild.model,RealmType,0,28,0,0,0,7,0,3,0,3
+Enchanted Courier Guild,edu.oop.guild.service,DeliveryPlanner,0,79,0,2,0,21,0,3,0,2
+Enchanted Courier Guild,edu.oop.guild.strategy,StandardDeliveryStrategy,0,33,0,2,0,6,0,3,0,2
+Enchanted Courier Guild,edu.oop.guild.strategy,CarefulDeliveryStrategy,0,41,1,3,0,9,1,4,0,2
+Enchanted Courier Guild,edu.oop.guild.strategy,ExpressDeliveryStrategy,0,33,0,2,0,6,0,3,0,2

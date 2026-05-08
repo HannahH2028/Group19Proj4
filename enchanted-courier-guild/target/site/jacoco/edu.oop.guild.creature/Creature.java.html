@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Creature.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Enchanted Courier Guild</a> &gt; <a href="index.source.html" class="el_package">edu.oop.guild.creature</a> &gt; <span class="el_source">Creature.java</span></div><h1>Creature.java</h1><pre class="source lang-java linenums">//Fady Francis
+//AI: Claude
+//Strategy: My strategy for designing something like this using AI, is using several tests and making sure that the code is built around the
+//the tests, AI has a very hard time forgetting what to do or how to do something if the implementation is built around something else. 
+//this strategy is going to be basically the same for all code written by me.
+//Prompt: Based off the entirety of the provided zip file, implement creature.java, TunnelMole.java, and CloudDragon.java. The implementation
+//focus should be on passing the provided tests in creature test.java along with making sure that these three files are implemented
+//without creating too much coupling.
+
+package edu.oop.guild.creature;
+
+import edu.oop.guild.model.DeliveryRequest;
+import edu.oop.guild.model.RealmType;
+import java.util.Objects;
+
+<span class="fc" id="L16">public abstract class Creature {</span>
+    public abstract String name();
+    public abstract int carryingCapacityKg();
+    public abstract RealmType nativeRealm();
+
+    public boolean canCarry(DeliveryRequest request) {
+<span class="fc" id="L22">        Objects.requireNonNull(request, &quot;request must not be null&quot;);</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">        return request.getDestinationRealm() == nativeRealm()</span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">            &amp;&amp; request.getWeightKg() &lt;= carryingCapacityKg();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

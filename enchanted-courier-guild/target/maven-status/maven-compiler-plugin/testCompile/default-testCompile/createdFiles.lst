@@ -1,0 +1,10 @@
+edu\oop\guild\model\EnumLabelTest.class
+edu\oop\guild\model\DeliveryRequestTest.class
+edu\oop\guild\seal\PackageSealTest.class
+edu\oop\guild\notification\NotificationAdapterTest.class
+edu\oop\guild\service\DeliveryPlannerTest.class
+edu\oop\guild\strategy\DeliveryCostStrategyTest.class
+edu\oop\guild\log\GuildLogTest.class
+edu\oop\guild\model\DeliveryPlanTest.class
+edu\oop\guild\factory\RealmFactoryTest.class
+edu\oop\guild\creature\CreatureTest.class

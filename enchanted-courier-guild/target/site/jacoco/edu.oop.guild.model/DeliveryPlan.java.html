@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DeliveryPlan.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Enchanted Courier Guild</a> &gt; <a href="index.source.html" class="el_package">edu.oop.guild.model</a> &gt; <span class="el_source">DeliveryPlan.java</span></div><h1>DeliveryPlan.java</h1><pre class="source lang-java linenums">//Fady Francis
+//AI: Claude
+//Strategy: My strategy for designing something like this using AI, is using several tests and making sure that the code is built around the
+//the tests, AI has a very hard time forgetting what to do or how to do something if the implementation is built around something else. 
+//this strategy is going to be basically the same for all code written by me.
+//Prompt: Based upon the three java files provided to you in the model folder. Specifically, DelieveryPlanTest.java, DeliveryRequestTest.java, 
+//and EnumLabelTest.java, generate an implementation of model that is focused on passing all the provided tests. The implemenation, is not
+//limited to three files but can be as many as you deem to be most effiecent and safe.
+
+package edu.oop.guild.model;
+
+import edu.oop.guild.creature.Creature;
+import java.util.Objects;
+
+public class DeliveryPlan {
+    private final DeliveryRequest request;
+    private final Creature courier;
+    private final String sealedLabel;
+    private final int priceInCoins;
+
+    public DeliveryPlan(DeliveryRequest request, Creature courier,
+<span class="fc" id="L22">                        String sealedLabel, int priceInCoins) {</span>
+<span class="fc" id="L23">        Objects.requireNonNull(request,     &quot;request must not be null&quot;);</span>
+<span class="fc" id="L24">        Objects.requireNonNull(courier,     &quot;courier must not be null&quot;);</span>
+<span class="fc" id="L25">        Objects.requireNonNull(sealedLabel, &quot;sealedLabel must not be null&quot;);</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">        if (priceInCoins &lt; 0) throw new IllegalArgumentException(&quot;priceInCoins must not be negative&quot;);</span>
+
+<span class="fc" id="L28">        this.request      = request;</span>
+<span class="fc" id="L29">        this.courier      = courier;</span>
+<span class="fc" id="L30">        this.sealedLabel  = sealedLabel;</span>
+<span class="fc" id="L31">        this.priceInCoins = priceInCoins;</span>
+<span class="fc" id="L32">    }</span>
+
+<span class="fc" id="L34">    public DeliveryRequest getRequest()  { return request; }</span>
+<span class="fc" id="L35">    public Creature getCourier()         { return courier; }</span>
+<span class="fc" id="L36">    public String getSealedLabel()       { return sealedLabel; }</span>
+<span class="fc" id="L37">    public int getPriceInCoins()         { return priceInCoins; }</span>
+
+    public String summary() {
+<span class="fc" id="L40">        return courier.name() + &quot; delivers &quot; + sealedLabel + &quot; for &quot; + priceInCoins + &quot; coins&quot;;</span>
+    }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
